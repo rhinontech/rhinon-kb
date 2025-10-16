@@ -1,4 +1,5 @@
 // app/page.tsx
+import KB from "@/pages/KB/KB";
 import { headers } from "next/headers";
 
 export default async function Home() {
@@ -15,12 +16,7 @@ export default async function Home() {
   }
 
   try {
-    return (
-      <div className="h-screen flex flex-col items-center justify-center">
-        <h1>Subdomain: {kbId}</h1>
-        <p>KB ID: {kbId}</p>
-      </div>
-    );
+    return <KB kbId={kbId} />;
   } catch {
     return null;
   }
